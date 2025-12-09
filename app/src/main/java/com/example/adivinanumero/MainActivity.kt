@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             AdivinaNumeroTheme {
                 Scaffold(modifier = Modifier) { innerPadding ->
-                    Juego(modifier = Modifier.padding(innerPadding))
+                    JuegoScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }

@@ -10,14 +10,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 
+// La ventan
 @Composable
-fun Juego(viewModel: JuegoViewModel = viewModel(), modifier: Modifier = Modifier) {
+fun JuegoScreen(viewModel: JuegoViewModel = viewModel(), modifier: Modifier = Modifier) {
     val uiState = viewModel.uiState.value
     var valorEntrada by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier.fillMaxSize().padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
         Text("Juego: Adivina el número", style = MaterialTheme.typography.titleLarge)
         Spacer(modifier = Modifier.height(16.dp))

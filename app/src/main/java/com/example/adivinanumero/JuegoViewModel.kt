@@ -8,7 +8,7 @@ import kotlin.random.Random
 
 class JuegoViewModel : ViewModel() {
 
-    private val _uiState = mutableStateOf(JuegoUiState(numeroSecreto = Random.nextInt(1, 101)))
+    private val _uiState = mutableStateOf(JuegoUiState(numeroSecreto = Random.nextInt(1, 100)))
     val uiState: State<JuegoUiState> = _uiState
 
     fun comprobarIntento(valor: String) {
@@ -21,15 +21,15 @@ class JuegoViewModel : ViewModel() {
         val nuevoHistorial = _uiState.value.intentos.toMutableList()
         val nuevoMensaje = when {
             numero < _uiState.value.numeroSecreto -> {
-                nuevoHistorial.add("$numero → bajo")
+                nuevoHistorial.add("$numero → El numero es menor")
                 "Demasiado bajo"
             }
             numero > _uiState.value.numeroSecreto -> {
-                nuevoHistorial.add("$numero → alto")
+                nuevoHistorial.add("$numero → El numero es mayor")
                 "Demasiado alto"
             }
             else -> {
-                nuevoHistorial.add("$numero → acertado")
+                nuevoHistorial.add("$numero → Número Correcto")
                 "¡Correcto!"
             }
         }
@@ -41,6 +41,6 @@ class JuegoViewModel : ViewModel() {
     }
 
     fun reiniciarJuego() {
-        _uiState.value = JuegoUiState(numeroSecreto = Random.nextInt(1, 101))
+        _uiState.value = JuegoUiState(numeroSecreto = Random.nextInt(1, 100))
     }
 }
