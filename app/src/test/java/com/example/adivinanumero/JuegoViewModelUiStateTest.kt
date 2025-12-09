@@ -1,6 +1,6 @@
 package com.example.adivinanumero
 
-import com.example.adivinanumero.ui.theme.JuegoViewModel
+import com.example.adivinanumero.ui.theme.AdivinaNumeroViewModel
 import org.junit.Assert.*
 import org.junit.Test
 
@@ -9,7 +9,7 @@ class JuegoViewModelUiStateTest {
     // CASOS DE ÉXITO (happy path)
     @Test
     fun intentoCorrectoActualizaUiState() {
-        val viewModel = JuegoViewModel()
+        val viewModel = AdivinaNumeroViewModel()
         val secreto = viewModel.uiState.value.numeroSecreto
         viewModel.comprobarIntento(secreto.toString())
 
@@ -21,7 +21,7 @@ class JuegoViewModelUiStateTest {
     // CASOS DE ERROR (error path)
     @Test
     fun entradaInvalidaActualizaUiState() {
-        val viewModel = JuegoViewModel()
+        val viewModel = AdivinaNumeroViewModel()
         viewModel.comprobarIntento("abc")
 
         val estado = viewModel.uiState.value
@@ -32,7 +32,7 @@ class JuegoViewModelUiStateTest {
     // CASOS LÍMITE (boundary case)
     @Test
     fun reiniciarJuegoGeneraNuevoNumeroYReseteaHistorial() {
-        val viewModel = JuegoViewModel()
+        val viewModel = AdivinaNumeroViewModel()
         val numeroInicial = viewModel.uiState.value.numeroSecreto
 
         viewModel.comprobarIntento(numeroInicial.toString()) // acertamos

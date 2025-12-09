@@ -12,7 +12,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 // La ventana principal del juego
 @Composable
-fun JuegoScreen(viewModel: JuegoViewModel = viewModel(), modifier: Modifier = Modifier) {
+fun JuegoScreen(viewModel: AdivinaNumeroViewModel = viewModel(), modifier: Modifier = Modifier) {
     val uiState = viewModel.uiState.value
     var valorEntrada by remember { mutableStateOf("") }
 
@@ -49,6 +49,9 @@ fun JuegoScreen(viewModel: JuegoViewModel = viewModel(), modifier: Modifier = Mo
         Spacer(modifier = Modifier.height(16.dp))
         Text("Historial de intentos:")
         LazyColumn {
+            item {
+                Text("Numero de intentos: " + uiState.intentos.size)
+            }
             items(uiState.intentos) { intento ->
                 Text(intento)
             }

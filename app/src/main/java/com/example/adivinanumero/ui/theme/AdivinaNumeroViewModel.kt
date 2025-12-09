@@ -6,12 +6,13 @@ import androidx.lifecycle.ViewModel
 import com.example.adivinanumero.data.Juego
 import kotlin.random.Random
 
-class JuegoViewModel : ViewModel() {
+class AdivinaNumeroViewModel : ViewModel() {
 
     private val _uiState =
         mutableStateOf(Juego(numeroSecreto = Random.Default.nextInt(1, 101)))
     val uiState: State<Juego> = _uiState
 
+    // Comprobamos que el intento sea valido
     fun comprobarIntento(valor: String) {
         val numero = valor.toIntOrNull()
         if (numero == null) {
@@ -19,22 +20,21 @@ class JuegoViewModel : ViewModel() {
             return
         }
 
-        // Guardo en un historial la pistas y informo si se acerca al numero o lo ha acertado
         val nuevoHistorial = _uiState.value.intentos.toMutableList()
         // Creo un nuevo mensaje cuando el numero introducido sea menor que el numero secreto o mayor o sino se ha acertado
         val nuevoMensaje = when {
             numero < _uiState.value.numeroSecreto -> {
-                _uiState.value.mensaje = "El numero es mayor"
+                _uiState.value.mensaje = "El numero es mayor" // pista
                 nuevoHistorial.add("$numero → ${_uiState.value.mensaje}")
                 "Es mayor que $numero"
             }
             numero > _uiState.value.numeroSecreto -> {
-                _uiState.value.mensaje = "El numero es menor"
+                _uiState.value.mensaje = "El numero es menor" //pista
                 nuevoHistorial.add("$numero → ${_uiState.value.mensaje}")
                 "Es menor que $numero"
             }
             else -> {
-                _uiState.value.mensaje = "Numero Correcto"
+                _uiState.value.mensaje = "Número Correcto" // has acertado
                 nuevoHistorial.add("$numero → ${_uiState.value.mensaje}")
                 "Has acertado era $numero"
             }
