@@ -1,4 +1,4 @@
-package com.example.adivinanumero
+package com.example.adivinanumero.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -16,8 +16,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AdivinaNumeroTheme {
-                Scaffold(modifier = Modifier) { innerPadding ->
-                    JuegoScreen(modifier = Modifier.padding(innerPadding))
+                Scaffold(modifier = Modifier.Companion) { innerPadding ->
+                    JuegoScreen(modifier = Modifier.Companion.padding(innerPadding))
                 }
             }
         }
