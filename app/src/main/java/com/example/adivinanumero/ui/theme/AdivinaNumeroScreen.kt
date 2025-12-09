@@ -12,7 +12,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 // La ventana principal del juego
 @Composable
-fun JuegoScreen(viewModel: AdivinaNumeroViewModel = viewModel(), modifier: Modifier = Modifier) {
+fun AdivinaScreen(viewModel: AdivinaNumeroViewModel = viewModel(), modifier: Modifier = Modifier) {
     val uiState = viewModel.uiState.value
     var valorEntrada by remember { mutableStateOf("") }
 
