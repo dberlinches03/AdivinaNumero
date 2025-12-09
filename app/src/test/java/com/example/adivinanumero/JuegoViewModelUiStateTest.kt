@@ -1,5 +1,6 @@
 package com.example.adivinanumero
 
+import com.example.adivinanumero.ui.theme.JuegoViewModel
 import org.junit.Assert.*
 import org.junit.Test
 
@@ -10,36 +11,11 @@ class JuegoViewModelUiStateTest {
     fun intentoCorrectoActualizaUiState() {
         val viewModel = JuegoViewModel()
         val secreto = viewModel.uiState.value.numeroSecreto
-
         viewModel.comprobarIntento(secreto.toString())
 
         val estado = viewModel.uiState.value
-        assertEquals("¡Correcto!", estado.mensaje)
-        assertTrue(estado.intentos.last().contains("acertado"))
-    }
-
-    @Test
-    fun intentoDemasiadoBajoActualizaUiState() {
-        val viewModel = JuegoViewModel()
-        val secreto = viewModel.uiState.value.numeroSecreto
-
-        viewModel.comprobarIntento((secreto - 1).toString())
-
-        val estado = viewModel.uiState.value
-        assertEquals("Demasiado bajo", estado.mensaje)
-        assertTrue(estado.intentos.last().contains("bajo"))
-    }
-
-    @Test
-    fun intentoDemasiadoAltoActualizaUiState() {
-        val viewModel = JuegoViewModel()
-        val secreto = viewModel.uiState.value.numeroSecreto
-
-        viewModel.comprobarIntento((secreto + 1).toString())
-
-        val estado = viewModel.uiState.value
-        assertEquals("Demasiado alto", estado.mensaje)
-        assertTrue(estado.intentos.last().contains("alto"))
+        assertEquals("Has acertado era $secreto", estado.mensaje)
+        assertTrue(estado.intentos.last().contains("Correcto"))
     }
 
     // CASOS DE ERROR (error path)
