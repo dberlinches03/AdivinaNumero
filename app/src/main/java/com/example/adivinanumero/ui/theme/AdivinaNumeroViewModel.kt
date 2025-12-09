@@ -21,7 +21,6 @@ class AdivinaNumeroViewModel : ViewModel() {
         }
 
         val nuevoHistorial = _uiState.value.intentos.toMutableList()
-        // Creo un nuevo mensaje cuando el numero introducido sea menor que el numero secreto o mayor o sino se ha acertado
         val nuevoMensaje = when {
             numero < _uiState.value.numeroSecreto -> {
                 _uiState.value.mensaje = "El numero es mayor" // pista
