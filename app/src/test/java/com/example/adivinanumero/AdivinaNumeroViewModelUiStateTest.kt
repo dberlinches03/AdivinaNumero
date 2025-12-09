@@ -4,7 +4,7 @@ import com.example.adivinanumero.ui.theme.AdivinaNumeroViewModel
 import org.junit.Assert.*
 import org.junit.Test
 
-class JuegoViewModelUiStateTest {
+class AdivinaNumeroViewModelUiStateTest {
 
     // CASOS DE ÉXITO (happy path)
     @Test

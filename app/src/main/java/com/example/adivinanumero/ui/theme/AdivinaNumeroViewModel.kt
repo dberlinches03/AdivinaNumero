@@ -25,17 +25,17 @@ class AdivinaNumeroViewModel : ViewModel() {
         val nuevoMensaje = when {
             numero < _uiState.value.numeroSecreto -> {
                 _uiState.value.mensaje = "El numero es mayor" // pista
-                nuevoHistorial.add("$numero → ${_uiState.value.mensaje}")
+                nuevoHistorial.add("$numero -> ${_uiState.value.mensaje}")
                 "Es mayor que $numero"
             }
             numero > _uiState.value.numeroSecreto -> {
                 _uiState.value.mensaje = "El numero es menor" //pista
-                nuevoHistorial.add("$numero → ${_uiState.value.mensaje}")
+                nuevoHistorial.add("$numero -> ${_uiState.value.mensaje}")
                 "Es menor que $numero"
             }
             else -> {
                 _uiState.value.mensaje = "Número Correcto" // has acertado
-                nuevoHistorial.add("$numero → ${_uiState.value.mensaje}")
+                nuevoHistorial.add("$numero -> ${_uiState.value.mensaje}")
                 "Has acertado era $numero"
             }
         }
