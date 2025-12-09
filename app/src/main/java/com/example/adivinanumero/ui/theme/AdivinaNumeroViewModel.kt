@@ -14,7 +14,7 @@ class AdivinaNumeroViewModel : ViewModel() {
 
     // Comprobamos que el intento sea valido
     fun comprobarIntento(valor: String) {
-        val numero = valor.toIntOrNull()
+        val numero = valor.toIntOrNull() // numero a introducir
         if (numero == null) {
             _uiState.value = _uiState.value.copy(mensaje = "Entrada inválida")
             return
