@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ExamenPMM"
+    namespace = "com.example.examenPMM"
     compileSdk {
         version = release(36)
     }

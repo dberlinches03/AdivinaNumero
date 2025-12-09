@@ -1,4 +1,4 @@
-package com.example.ExamenPMM.ui.theme
+package com.example.examenPMM.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

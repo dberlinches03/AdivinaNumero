@@ -1,4 +1,4 @@
-package com.example.ExamenPMM
+package com.example.examenPMM
 
 import org.junit.Test
 

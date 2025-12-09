@@ -1,4 +1,4 @@
-package com.example.ExamenPMM.app
+package com.example.examenPMM.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,8 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.ExamenPMM.ui.theme.AdivinaNumeroTheme
-import com.example.ExamenPMM.ui.theme.AdivinaScreen
+import com.example.examenPMM.ui.theme.AdivinaNumeroTheme
+import com.example.examenPMM.ui.theme.AdivinaScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

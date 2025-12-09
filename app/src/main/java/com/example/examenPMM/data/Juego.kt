@@ -1,4 +1,4 @@
-package com.example.ExamenPMM.data
+package com.example.examenPMM.data
 
 // Datos del juego
 data class Juego(

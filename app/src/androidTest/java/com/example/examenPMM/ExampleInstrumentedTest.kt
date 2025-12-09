@@ -1,4 +1,4 @@
-package com.example.ExamenPMM
+package com.example.examenPMM
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

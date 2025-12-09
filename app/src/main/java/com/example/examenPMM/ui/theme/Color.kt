@@ -1,4 +1,4 @@
-package com.example.ExamenPMM.ui.theme
+package com.example.examenPMM.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
