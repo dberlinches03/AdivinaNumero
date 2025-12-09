@@ -1,6 +1,6 @@
-package com.example.adivinanumero
+package com.example.ExamenPMM
 
-import com.example.adivinanumero.ui.theme.AdivinaNumeroViewModel
+import com.example.ExamenPMM.ui.theme.AdivinaNumeroViewModel
 import org.junit.Assert.*
 import org.junit.Test
 

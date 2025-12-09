@@ -1,4 +1,4 @@
-package com.example.adivinanumero.data
+package com.example.ExamenPMM.data
 
 // Datos del juego
 data class Juego(

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdivinaNumero">
         <activity
-            android:name=".app.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.AdivinaNumero">

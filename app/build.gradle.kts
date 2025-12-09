@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.adivinanumero"
+    namespace = "com.example.ExamenPMM"
     compileSdk {
         version = release(36)
     }

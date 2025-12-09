@@ -1,9 +1,9 @@
-package com.example.adivinanumero.ui.theme
+package com.example.ExamenPMM.ui.theme
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.example.adivinanumero.data.Juego
+import com.example.ExamenPMM.data.Juego
 import kotlin.random.Random
 
 class AdivinaNumeroViewModel : ViewModel() {

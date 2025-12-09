@@ -1,4 +1,4 @@
-package com.example.adivinanumero.ui.theme
+package com.example.ExamenPMM.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

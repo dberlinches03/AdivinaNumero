@@ -1,4 +1,4 @@
-package com.example.adivinanumero
+package com.example.ExamenPMM
 
 import org.junit.Test
 
