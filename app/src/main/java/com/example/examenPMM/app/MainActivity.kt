@@ -16,8 +16,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AdivinaNumeroTheme {
-                Scaffold(modifier = Modifier.Companion) { innerPadding ->
-                    AdivinaScreen(modifier = Modifier.Companion.padding(innerPadding))
+                Scaffold(modifier = Modifier) { innerPadding ->
+                    AdivinaScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }

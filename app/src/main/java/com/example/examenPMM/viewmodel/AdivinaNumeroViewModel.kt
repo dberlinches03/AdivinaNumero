@@ -1,4 +1,4 @@
-package com.example.examenPMM.ui.theme
+package com.example.examenPMM.viewmodel
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
